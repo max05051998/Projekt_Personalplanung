@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="M120_LB2_FS16.Kalenderansicht"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:M120_LB2_FS16"
+             mc:Ignorable="d">
+    
+    <Grid x:Name="mainKalenderGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel x:Name="month" Margin="10,10,10,10" HorizontalAlignment="Left" Grid.Row="0">
+            <Button x:Name="Button_PrevWeek" Width="25px" Click="Button_PrevWeek_Click" Background="Transparent" BorderBrush="Transparent">&lt;</Button>
+            <Label x:Name="Label_Datum">Datum</Label>
+            <Button x:Name="Button_NextWeek" Width="25px" Click="Button_NextWeek_Click" Background="Transparent" BorderBrush="Transparent">&gt;</Button>
+        </WrapPanel>
+
+        <Grid x:Name="weekdays" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="1" HorizontalAlignment="Center">Montag</Label>
+            <Label Grid.Column="2" HorizontalAlignment="Center">Dienstag</Label>
+            <Label Grid.Column="3" HorizontalAlignment="Center">Mittwoch</Label>
+            <Label Grid.Column="4" HorizontalAlignment="Center">Donnerstag</Label>
+            <Label Grid.Column="5" HorizontalAlignment="Center">Freitag</Label>
+            <Label Grid.Column="6" HorizontalAlignment="Center">Samstag</Label>
+            <Label Grid.Column="7" HorizontalAlignment="Center">Sonntag</Label>
+        </Grid>
+
+        <ScrollViewer Grid.Row="2">
+            <Grid x:Name="kalenderInhalt"  Margin="5,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="15"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20px"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.Resources>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="FontSize" Value="9"/>
+                        <Setter Property="VerticalAlignment" Value="Top"/>
+                    </Style>
+                </Grid.Resources>
+
+                <Label Grid.Row="0" Padding="1" BorderThickness="0">00</Label>
+                <Label Grid.Row="1" Padding="1" BorderThickness="0">01</Label>
+                <Label Grid.Row="2" Padding="1" BorderThickness="0">02</Label>
+                <Label Grid.Row="3" Padding="1" BorderThickness="0">03</Label>
+                <Label Grid.Row="4" Padding="1" BorderThickness="0">04</Label>
+                <Label Grid.Row="5" Padding="1" BorderThickness="0">05</Label>
+                <Label Grid.Row="6" Padding="1" BorderThickness="0">06</Label>
+                <Label Grid.Row="7" Padding="1" BorderThickness="0">07</Label>
+                <Label Grid.Row="8" Padding="1" BorderThickness="0">08</Label>
+                <Label Grid.Row="9" Padding="1" BorderThickness="0">09</Label>
+                <Label Grid.Row="10" Padding="1" BorderThickness="0">10</Label>
+                <Label Grid.Row="11" Padding="1" BorderThickness="0">11</Label>
+                <Label Grid.Row="12" Padding="1" BorderThickness="0">12</Label>
+                <Label Grid.Row="13" Padding="1" BorderThickness="0">13</Label>
+                <Label Grid.Row="14" Padding="1" BorderThickness="0">14</Label>
+                <Label Grid.Row="15" Padding="1" BorderThickness="0">15</Label>
+                <Label Grid.Row="16" Padding="1" BorderThickness="0">16</Label>
+                <Label Grid.Row="17" Padding="1" BorderThickness="0">17</Label>
+                <Label Grid.Row="18" Padding="1" BorderThickness="0">18</Label>
+                <Label Grid.Row="19" Padding="1" BorderThickness="0">19</Label>
+                <Label Grid.Row="20" Padding="1" BorderThickness="0">20</Label>
+                <Label Grid.Row="21" Padding="1" BorderThickness="0">21</Label>
+                <Label Grid.Row="22" Padding="1" BorderThickness="0">22</Label>
+                <Label Grid.Row="23" Padding="1" BorderThickness="0">23</Label>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

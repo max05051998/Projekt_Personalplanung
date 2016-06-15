@@ -1,0 +1,57 @@
+﻿<Window x:Class="M120_LB2_FS16.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:M120_LB2_FS16"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="675">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Margin="5,5,5,5">
+            <Grid.Column>0</Grid.Column>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,0,0,5"/>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                </Style>
+            </Grid.Resources>
+
+            <Button x:Name="Button_Listenansicht" Content="Listenansicht" Click="Button_Listenansicht_Click" Grid.Row="0"/>
+            <Button x:Name="Button_Einzelansicht" Content="Einzelansicht" Click="Button_Einzelansicht_Click" Grid.Row="1"/>
+            <Button x:Name="Button_Kalenderansicht" Content="Kalenderansicht" Click="Button_Kalenderansicht_Click" Grid.Row="2"/>
+
+            <Grid>
+                <Grid.Row>4</Grid.Row>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="Button_Neu" Content="Neu" Click="Button_Neu_Click" Grid.Row="0"/>
+                <Button x:Name="Button_Abbrechen" Content="Abbrechen" Click="Button_Abbrechen_Click" Grid.Row="1"/>
+                <Button x:Name="Button_Speichern" Content="Speichern" Click="Button_Speichern_Click" Grid.Row="2"/>
+                <Button x:Name="Button_Suchen" Content="Suchen" Click="Button_Suchen_Click" Grid.Row="3"/>
+                <TextBox x:Name="Textbox_Suchen" Text="dd.mm.yyyy" TextAlignment="Center" Margin="0,0,0,5" GotMouseCapture="Textbox_Suchen_GotMouseCapture" LostFocus="TextBox_Suchen_LostFocus" Grid.Row="4"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="InhaltsAnzeige" Margin="5,5,5,5">
+            <Grid.Column>1</Grid.Column>
+        </Grid>
+    </Grid>
+</Window>
